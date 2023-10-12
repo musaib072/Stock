@@ -1,4 +1,4 @@
-version: '2.15.1'
+version: '2.1'
 services:
   frontend:
     image: deploy-stock

@@ -1,2 +1,1 @@
-# Stock WEBAPP
-another for testt
+# Stock Webapp

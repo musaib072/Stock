@@ -1,0 +1,30 @@
+version: 0.2
+
+env:
+  variables:
+    DOCKER_USERNAME: "akamusaib"
+  parameter-store:
+    DOCKER_PASSWORD: "docker_password"
+
+phases:
+  install:
+    commands:
+      - echo enter the installed phase
+      - apt-get update -y
+
+  pre_build:
+    - echo enter the build phase
+    - docker login -u akamusaib -P Password@24
+
+
+  build:
+    - echo enter the build phase
+    - docker build -t mystock:v3 .
+    - docker tag mystock:v3  akamusaib/repo-dump:mystock:v3
+
+  post-build:
+    commands:
+      - echo Build finished 'date'
+      -echo Pushing the docker image...
+      - docker push akamusaib/repo-dump:mystock:v2
+      

@@ -4,7 +4,7 @@ env:
   variables:
     DOCKER_USERNAME: "akamusaib"
   secrets-manager:
-    LOCAL_SECRET_VAR: "DOCKERPASS:dockerpass"
+    LOCAL_SECRET_VAR: "dockerpass:DOCKERPASS"
 
 phases:
   pre_build:

@@ -16,7 +16,7 @@ phases:
     - echo enter the build phase
     - docker build -t mystock:v3 .
     - docker tag mystock:v3  akamusaib/repo-dump:mystock:v3
-  post-build:
+  post_build:
     commands:
       - echo Build finished 'date'
       - echo Pushing the docker image...

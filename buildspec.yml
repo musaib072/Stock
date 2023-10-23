@@ -25,6 +25,6 @@ phases:
   post-build:
     commands:
       - echo Build finished 'date'
-      -echo Pushing the docker image...
+      - echo Pushing the docker image...
       - docker push akamusaib/repo-dump:mystock:v2
       

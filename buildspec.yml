@@ -3,8 +3,8 @@ version: 0.2
 env:
   variables:
     DOCKER_USERNAME: "akamusaib"
-  parameter-store:
-    DOCKER_PASSWORD: "docker_password"
+  secrets-manager:
+    DOCKER_PASSWORD: "keyvalue:keyname"
 
 phases:
   install:

@@ -7,21 +7,13 @@ env:
     DOCKER_PASSWORD: "DOCKERPASS:dockerpass"
 
 phases:
-  install:
-    commands:
-      - echo enter the installed phase
-      - apt-get update -y
-
   pre_build:
     - echo enter the build phase
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-
-
   build:
     - echo enter the build phase
     - docker build -t mystock:v3 .
     - docker tag mystock:v3  akamusaib/repo-dump:mystock:v3
-
   post-build:
     commands:
       - echo Build finished 'date'

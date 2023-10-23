@@ -14,7 +14,7 @@ phases:
 
   pre_build:
     - echo enter the build phase
-    - docker login -u akamusaib -P Password@24
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 
   build:
